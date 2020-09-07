@@ -36,7 +36,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.EntityViews
             {
                 var taxTag = entityView.Properties.First(p => p.Name == "TaxTag").Value ?? "";
                 var countryCode = entityView.Properties.First(p => p.Name == "CountryCode").Value ?? "";
-                var taxPct = System.Convert.ToDecimal(entityView.Properties.First(p => p.Name == "TaxPct").Value ?? "0");
+                var taxPercent = System.Convert.ToDecimal(entityView.Properties.First(p => p.Name == "TaxPct").Value ?? "0");
 
                 var sampleDashboardEntity = new VatTaxEntity
                 {
@@ -44,7 +44,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.EntityViews
                     Name = string.Empty,
                     TaxTag = taxTag,
                     CountryCode = countryCode,
-                    TaxPct = taxPct
+                    TaxPercentage = taxPercent
                 };
 
                 sampleDashboardEntity.GetComponent<ListMembershipsComponent>().Memberships.Add(CommerceEntity.ListName<VatTaxEntity>());

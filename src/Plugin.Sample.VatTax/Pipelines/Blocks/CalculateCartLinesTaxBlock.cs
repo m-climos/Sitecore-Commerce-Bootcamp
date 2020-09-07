@@ -66,7 +66,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.Pipelines.Blocks
 
                             if (taxRateLine.CountryCode == country)
                             {
-                                var taxRate = taxRateLine.TaxPct / 100;
+                                var taxRate = taxRateLine.TaxPercentage / 100;
                                 context.Logger.LogDebug($"{this.Name} - Item Tax Rate:{taxRate}");
                                 var adjustmentTotal = line.Adjustments.Where(a => a.IsTaxable).Aggregate(0M, (current, adjustment) => current + adjustment.Adjustment.Amount);
                                 context.Logger.LogDebug($"{this.Name} - SubTotal:{line.Totals.SubTotal.Amount}");

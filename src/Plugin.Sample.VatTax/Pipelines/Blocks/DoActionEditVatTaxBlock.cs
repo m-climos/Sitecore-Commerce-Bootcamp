@@ -45,7 +45,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.Pipelines.Blocks
             vatTaxItemToEdit.CountryCode = arg.Properties.FirstOrDefault(x =>
             x.Name.Equals("CountryCode", StringComparison.OrdinalIgnoreCase))?.Value;
 
-            vatTaxItemToEdit.TaxPct = Convert.ToDecimal(arg.Properties.FirstOrDefault(x =>
+            vatTaxItemToEdit.TaxPercentage = Convert.ToDecimal(arg.Properties.FirstOrDefault(x =>
             x.Name.Equals("TaxPct", StringComparison.OrdinalIgnoreCase))?.Value);
 
             await this._commerceCommander.Pipeline<IPersistEntityPipeline>().Run(new PersistEntityArgument(vatTaxItem), context);

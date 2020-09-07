@@ -69,7 +69,7 @@ namespace Plugin.Bootcamp.Exercises.Catalog.WarrantyInformation.Pipelines.Blocks
                 System.Diagnostics.Debug.WriteLine($"Get Entity View in Edit view. Version from the argument is {arg.EntityVersion}");
             }
 
-            if (sellableItem != null && (sellableItem.HasComponent<WarrantyNotesComponent>(variationId) || isConnectView))
+            if (sellableItem != null && (sellableItem.HasComponent<WarrantyNotesComponent>(variationId) || isConnectView || isEditView))
             {
                 var component = sellableItem.GetComponent<WarrantyNotesComponent>(variationId);
 

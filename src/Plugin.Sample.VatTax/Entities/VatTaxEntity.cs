@@ -15,7 +15,7 @@
             this.DateUpdated = this.DateCreated;
             this.CountryCode = "US";
             this.TaxTag = string.Empty;
-            this.TaxPct = 0M;
+            this.TaxPercentage = 0M;
         }
 
         public VatTaxEntity(string id): this()
@@ -30,6 +30,6 @@
 
         public string TaxTag { get; set; }
 
-        public decimal TaxPct { get; set; }
+        public decimal TaxPercentage { get; set; }
     }
 }

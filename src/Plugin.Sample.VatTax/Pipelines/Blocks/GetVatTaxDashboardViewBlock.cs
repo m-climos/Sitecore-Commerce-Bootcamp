@@ -40,6 +40,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.EntityViews
                 new ViewProperty
                 {
                     Name = "TaxTag",
+                    DisplayName = "Tag",
                     IsHidden = false,
                     IsRequired = true,
                     RawValue = vatTaxItem.TaxTag
@@ -49,6 +50,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.EntityViews
                     new ViewProperty
                     {
                         Name = "CountryCode",
+                        DisplayName = "Country Code",
                         IsHidden = false,
                         IsRequired = true,
                         RawValue = vatTaxItem.CountryCode
@@ -58,9 +60,10 @@ namespace Plugin.Bootcamp.Exercises.VatTax.EntityViews
                     new ViewProperty
                     {
                         Name = "TaxPct",
+                        DisplayName = "Tax Percentage",
                         IsHidden = false,
                         IsRequired = true,
-                        RawValue = vatTaxItem.TaxPct
+                        RawValue = vatTaxItem.TaxPercentage
                     });
             }
 
@@ -71,6 +74,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.EntityViews
                     new ViewProperty
                     {
                         Name = "TaxTag",
+                        DisplayName = "Tag",
                         IsHidden = false,
                         IsRequired = true,
                         RawValue = string.Empty
@@ -80,6 +84,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.EntityViews
                     new ViewProperty
                     {
                         Name = "CountryCode",
+                        DisplayName = "Country Code",
                         IsHidden = false,
                         IsRequired = true,
                         RawValue = string.Empty
@@ -89,6 +94,7 @@ namespace Plugin.Bootcamp.Exercises.VatTax.EntityViews
                     new ViewProperty
                     {
                         Name = "TaxPct",
+                        DisplayName = "Tax Percentage",
                         IsHidden = false,
                         IsRequired = true,
                         RawValue = string.Empty

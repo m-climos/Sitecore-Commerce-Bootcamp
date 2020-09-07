@@ -51,9 +51,9 @@ namespace Plugin.Bootcamp.Exercises.VatTax.Pipelines.Blocks
                         Icon = pluginPolicy.Icon,
                         Properties = new List<ViewProperty>
                         {
-                            new ViewProperty {Name = "TaxTag", RawValue = sampleDashboardEntity.TaxTag },
-                            new ViewProperty {Name = "CountryCode", RawValue = sampleDashboardEntity.CountryCode },
-                            new ViewProperty {Name = "TaxPct", RawValue = sampleDashboardEntity.TaxPct }
+                            new ViewProperty {Name = "TaxTag",DisplayName="Tag", RawValue = sampleDashboardEntity.TaxTag },
+                            new ViewProperty {Name = "CountryCode",DisplayName="Country Code", RawValue = sampleDashboardEntity.CountryCode },
+                            new ViewProperty {Name = "TaxPct",DisplayName="Tax Percent", RawValue = sampleDashboardEntity.TaxPercentage }
                         }
                     });
             }
